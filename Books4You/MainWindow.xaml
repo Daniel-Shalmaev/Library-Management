@@ -1,0 +1,166 @@
+﻿<Window x:Class="Books4You.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Books4You"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1200"
+        DataContext="{Binding Source={StaticResource Locator}, Path = Main}"
+        WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+    <Border CornerRadius="10">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="Assets/Images/Book_background.jpg"/>
+            </Grid.Background>
+
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button
+                   Height="35"
+                   Grid.Column="5"
+                   VerticalAlignment="Top"
+                   Foreground="Transparent" 
+                   Background="Transparent"
+                   BorderBrush="Transparent"
+                   HorizontalAlignment="Right"
+                   Command="{Binding ExitCommand}">
+
+                <StackPanel
+                           Background="White"
+                           Orientation="Horizontal">
+                    <Image
+                          Width="30"
+                          Height="30"
+                          Source="/Assets/Icons/ExitBtn.png"/>
+                </StackPanel>
+            </Button>
+
+            <Button
+                   Width="70"
+                   Height="70"
+                   Grid.Row="2"
+                   Command="{Binding }"
+                   VerticalAlignment="Top"
+                   Foreground="Transparent" 
+                   Background="Transparent"
+                   HorizontalAlignment="Left"
+                   BorderBrush="Transparent">
+
+                <StackPanel
+                           Orientation="Horizontal"
+                           Background="Transparent">
+                    <Image
+                          Width="65"
+                          Height="65"
+                          Source="/Assets/Icons/Buy_Icon.png"/>
+                </StackPanel>
+            </Button>
+
+            <TextBlock
+                      Grid.Row="2"
+                      Text="Bag"
+                      FontSize="18"
+                      FontWeight="Bold"
+                      Margin="17,0,0,23"
+                      HorizontalAlignment="Left"
+                      VerticalAlignment="Bottom"/>
+
+            <TextBlock
+                      FontSize="60"
+                      Text="Book4You"
+                      FontWeight="Bold"
+                      Foreground="Black"
+                      Background="Transparent"
+                      FontFamily="Californian FB"/>
+
+            <Button
+                   Height="50"
+                   Width="100"
+                   Grid.Row="1"
+                   FontSize="25"
+                   Content="Library"
+                   Grid.ColumnSpan="4"
+                   Foreground="#FFEBD291"
+                   Background="Transparent"
+                   VerticalAlignment="Center"
+                   BorderBrush="Transparent"
+                   Command="{Binding LibraryCommand}"/>
+
+            <Button
+                   Height="50"
+                   Width="170" 
+                   Grid.Row="2" 
+                   FontSize="25" 
+                   Grid.Column="2"
+                   Content="Coming Soon"
+                   Foreground="#FFEBD291"
+                   Background="Transparent"
+                   BorderBrush="Transparent"
+                   Command="{Binding AddComingSoonCommand}"/>
+
+            <Button
+                   Width="170"
+                   Height="50"
+                   Grid.Row="2" 
+                   FontSize="25" 
+                   Grid.Column="1" 
+                   Content="Order History"
+                   Foreground="#FFEBD291"
+                   Background="Transparent"
+                   BorderBrush="Transparent"/>
+
+            <Button
+                   Height="50"
+                   Grid.Row="2"
+                   FontSize="25"
+                   Grid.Column="3"
+                   Content="Add Book"
+                   Foreground="#FFC5D94C"
+                   Background="Transparent"
+                   BorderBrush="Transparent"
+                   HorizontalAlignment="Right"
+                   Visibility="{Binding IsManager}"
+                   Command="{Binding AddBookCommand}"/>
+
+            <Button
+                   Height="50"
+                   Grid.Row="1"
+                   FontSize="25" 
+                   Grid.Column="3"
+                   Content="Add Journal"
+                   Foreground="#FFC5D94C"
+                   Background="Transparent"
+                   BorderBrush="Transparent"
+                   HorizontalAlignment="Right"
+                   Visibility="{Binding IsManager}"
+                   Command="{Binding AddJournalCommand}"/>
+            <Button 
+                   Width="70"
+                   Height="30"
+                   Grid.Row="4"
+                   FontSize="20"
+                   Grid.Column="3"
+                   Content="Logout"
+                   Foreground="White"
+                   Background="Transparent"
+                   BorderBrush="Transparent"
+                   HorizontalAlignment="Right"
+                   Command="{Binding LogoutCommand}"/>
+        </Grid>
+    </Border>
+</Window>

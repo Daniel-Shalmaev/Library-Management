@@ -1,0 +1,157 @@
+﻿<Window x:Class="Books4You.Views.LoginRegisterView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Books4You.Views"
+        mc:Ignorable="d" Title="MainWindow" Height="450" Width="380"
+        AllowsTransparency="True" Background="Transparent"
+        WindowStyle="None" ResizeMode="NoResize"
+        DataContext="{Binding Source={StaticResource Locator}, Path = Login}">
+    <Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Border
+                   Grid.RowSpan="2"
+                   CornerRadius="10">
+                <Border.Background>
+                    <LinearGradientBrush>
+                        <GradientStop Color="#FFEBD291" Offset="0.0"/>
+                        <GradientStop Color="Black" Offset="1.25"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+
+
+            <Button
+                   Height="25"
+                   Grid.Column="5"
+                   VerticalAlignment="Top"
+                   Background="Transparent"
+                   Foreground="Transparent" 
+                   BorderBrush="Transparent"
+                   HorizontalAlignment="Right"
+                   Command="{Binding ExitCommand}">
+
+                <StackPanel
+                           Background="White"
+                           Orientation="Horizontal">
+
+                    <Image
+                          Width="20"
+                          Height="20"
+                          Source="/Assets/Icons/ExitBtn.png"/>
+                </StackPanel>
+            </Button>
+
+
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock
+                          Text="Login"
+                          FontSize="22"
+                          FontWeight="Light"
+                          Foreground="White"
+                          FontFamily="helvetica"
+                          HorizontalAlignment="Center"/>
+            </StackPanel>
+
+
+
+            <StackPanel Grid.Row="1" >
+                <StackPanel Orientation="Horizontal">
+                    <TextBox
+                            Width="245"
+                            Height="25"
+                            FontSize="20"
+                            Opacity="0.5"
+                            Margin="63,0,0,0"
+                            FontWeight="Light"
+                            BorderThickness="0"
+                            Foreground="White"
+                            FontFamily="Helvetica"
+                            Background="Transparent"
+                            HorizontalAlignment="Center"
+                            Text="{Binding UserNameTbx}"
+                            HorizontalContentAlignment="Left"/>
+                    
+                </StackPanel>
+                <Border
+                       Height="2"
+                       Width="250"
+                       Opacity="0.5"
+                       Background="White"/>
+
+                <StackPanel
+                           Margin="0,20,0,0"
+                           Orientation="Horizontal">
+                    
+                    <TextBox
+                            Width="245"
+                            Height="25"
+                            FontSize="20"
+                            Opacity="0.5"
+                            Margin="63,0,0,0"
+                            FontWeight="Light"
+                            BorderThickness="0"
+                            Foreground="White"
+                            FontFamily="Helvetica"
+                            Background="Transparent"
+                            Text="{Binding PasswordTbx}"
+                            HorizontalAlignment="Center"
+                            HorizontalContentAlignment="Left"/>
+                </StackPanel>
+                <Border Width="250"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5"/>
+
+
+                <StackPanel
+                           Margin="0,50,0,0"
+                           Orientation="Horizontal">
+                    
+                    <Button
+                           Width="100" 
+                           Height="40" 
+                           Content="Login"
+                           Margin="60,0,60,0"
+                           Background="Transparent"
+                           BorderBrush="Transparent" 
+                           Command="{Binding LoginCommand}"/>
+                    
+                    <Button
+                           Height="40"
+                           Width="100"
+                           Content="Register"
+                           Background="Transparent"
+                           BorderBrush="Transparent"
+                           Command="{Binding RegisterCommand}"/>
+                </StackPanel>
+            </StackPanel>
+
+            <TextBlock
+                      Height="20"
+                      Grid.Row="1" 
+                      Text="Username"
+                      Margin="0,5,66,200"
+                      Foreground="White"
+                      Background="Transparent"
+                      HorizontalAlignment="Right"/>
+            
+            <TextBlock
+                      Height="20" 
+                      Grid.Row="1"
+                      Text="Password"
+                      Foreground="White" 
+                      Margin="0,51,66,154"
+                      Background="Transparent" 
+                      HorizontalAlignment="Right"/>
+        </Grid>
+    </Grid>
+</Window>
+

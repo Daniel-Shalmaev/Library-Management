@@ -1,0 +1,6 @@
+C:\Users\danie\OneDrive\שולחן העבודה\Books4You\Services\bin\Debug\Services.dll
+C:\Users\danie\OneDrive\שולחן העבודה\Books4You\Services\bin\Debug\Services.pdb
+C:\Users\danie\OneDrive\שולחן העבודה\Books4You\Services\obj\Debug\Services.csproj.AssemblyReference.cache
+C:\Users\danie\OneDrive\שולחן העבודה\Books4You\Services\obj\Debug\Services.csproj.CoreCompileInputs.cache
+C:\Users\danie\OneDrive\שולחן העבודה\Books4You\Services\obj\Debug\Services.dll
+C:\Users\danie\OneDrive\שולחן העבודה\Books4You\Services\obj\Debug\Services.pdb
